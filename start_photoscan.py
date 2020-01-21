@@ -1,33 +1,33 @@
-#1. to run this script open command prompt and type the following line 
-### cd ../..
-#2. hit enter then type the following line
-### cd Program Files\Agisoft\PhotoScan Pro 
-#2. hit enter then type the folloring command and hit enter
-### photoscan -r C:\Users\Civil\Desktop\Agisoft_Script\start_photoscan.py
-#3. the script will run and create a new photoscan file named test.psx in the Agisoft_Script folder on the desktop
+# 1. to run this script open command prompt and type the following line
+# ## cd ../..
+# 2. hit enter then type the following line
+# ## cd Program Files\Agisoft\PhotoScan Pro
+# 2. hit enter then type the folloring command and hit enter
+# ## photoscan -r C:\Users\Civil\Desktop\Agisoft_Script\start_photoscan.py
+# 3. the script will run and create a new photoscan file named test.psx in the Agisoft_Script folder on the desktop
 
 import PhotoScan
 import os
 import time
 
-#start headless photoscan from command line prompt and save the new project
+# start headless photoscan from command line prompt and save the new project
 project = PhotoScan.app.document
 project.save(r'C:\users\civil\Desktop\Kevin-Neighborhood\model.psx')
 
 
-#add new chunk to project
+# add new chunk to project
 chunk = project.addChunk()
 chunk.label = "new_chunk"
-#chunk = PhotoScan.app.document.chunk
+# chunk = PhotoScan.app.document.chunk
 project.save()
 
 
-#create list of all photos in a folder
+# create list of all photos in a folder
 images_path = r'C:\Users\Civil\Desktop\Kevin-Neighborhood\Photos'
 images_list = os.listdir(images_path)
 project.save()
 
-#add each photo to the chunk
+# add each photo to the chunk
 for image in images_list:
 	try:
 		chunk.addPhotos([images_path + "\\" + image]) 
