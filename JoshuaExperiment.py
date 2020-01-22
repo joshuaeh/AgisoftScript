@@ -1,5 +1,5 @@
 import os
-import PhotoScan
+#import PhotoScan
 import sys
 
 '''Instructions:
@@ -18,3 +18,6 @@ import sys
 
 
 # Omega Parameters
+
+
+os.popen('dir')
