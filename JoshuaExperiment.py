@@ -2,7 +2,8 @@ import os
 #import PhotoScan
 import sys
 from pathlib import Path
-from Code import firefly
+import Code.firefly as firefly
+import code.omega.whipped_python
 
 '''Instructions:
 
