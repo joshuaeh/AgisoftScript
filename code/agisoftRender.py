@@ -113,6 +113,14 @@ def firefly(
         format=Metashape.ModelFormatPLY,
         projection=Metashape.CoordinateSystem("EPSG::4326"))
     project.save()
-    print("Finished Exporing .PLY Model")
+    print("Finished Exporting .PLY Model")
+
+    # show model creation time
+    end_agisoft = clock.time
+    time_agisoft = end_agisoft - start_time
+    print(f'Time in Agisoft: {time_agisoft}')
+
+    # Begin omega calculation
+
 
 

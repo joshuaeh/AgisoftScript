@@ -1,6 +1,7 @@
 import os
 #import PhotoScan
 import sys
+import time
 from pathlib import Path
 import Code.firefly as firefly
 import code.omega.whipped_python
@@ -22,9 +23,10 @@ To run on a computer with PhotoScan Pro:
 '''
 
 
-##################################################
-############ User Parameters  ####################
-##################################################
+
+'''
+User Parameters
+'''
 
 # ---------- Project parameters-------------------
 
@@ -39,18 +41,19 @@ iteration = 0  # creates subfolder for results of each iteration starting at 0
 
 
 
-##################################################
-############ Results Folder Creation  ############
-##################################################
+'''
+Directory Creation
+'''
 
-# creates subfolder of date and name specified
-results_folder_name = f"{project_date[0]}.{project_date[1]}.{project_date[2]} - {project_title.title()}"
-results_folder_dir = "Results/" + results_folder_name + f"/iteration{iteration}"
-Path(results_folder_dir).mkdir(parents=True, exist_ok=True)
 
-##################################################
-############ Agisoft Model Creation  #############
-##################################################
+'''
+Agisoft Model Creation
+'''
+
+
+'''
+Omega Model Creation
+'''
 
 
 
